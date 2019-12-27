@@ -1,6 +1,12 @@
 //Variables
 @backgroundBlue: orange;
 
+//mixins
+.purpleText {
+    color: @backgroundBlue;
+    font-size: 1.3rem;
+}
+
 //Nesting   (don't go  more than 3-4 leyers deep)
 .container {
     width: 800px;
@@ -20,8 +26,7 @@
             justify-content: space-between;
 
             a {
-                color: @backgroundBlue;
-                font-size: 1.3rem;
+                .purpleText();
                 text-decoration: none;
 
 
@@ -31,7 +36,9 @@
             }
         }
     }
+
+    section {
+        width: 100% - 10%;
+
+    }
 }
-
-
-//mixins
