@@ -1,17 +1,28 @@
-body {
-  font-family: Tahoma;
-  background: #f4f4f4;
-  line-height: 2em;
+.container {
+  width: 800px;
+  margin: 50px auto;
 }
-.primary-text {
-  color: #3b5998;
+@media (max-width: 800px) {
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
 }
-.btn,
-.primary-btn {
-  padding: 10px 15px;
-  border: 0;
+.container header {
+  width: 100%;
 }
-.primary-btn {
-  background: #3b5998;
-  color: #fff;
+.container header nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.container header nav a {
+  color: orange;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+@media (max-width: 800px) {
+  .container header nav a {
+    color: dodgerblue;
+  }
 }

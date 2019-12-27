@@ -1,28 +1,37 @@
 //Variables
+@backgroundBlue: orange;
 
-@background-color: #f4f4f4;
-@font-family: Tahoma;
-@primary-color: #3b5998;
-@secondary-color: #20b2aa;
-@line-height: 1em + 1em;
+//Nesting   (don't go  more than 3-4 leyers deep)
+.container {
+    width: 800px;
+    margin: 50px auto;
 
-body {
-    font-family: @font-family;
-    background: @background-color;
-    line-height: @line-height;
+    @media (max-width: 800px) {
+        width: 100%;
+        padding: 20px;
+    }
+
+    header {
+        width: 100%;
+
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            a {
+                color: @backgroundBlue;
+                font-size: 1.3rem;
+                text-decoration: none;
+
+
+                @media (max-width: 800px) {
+                    color: dodgerblue;
+                }
+            }
+        }
+    }
 }
 
-.primary-text {
-    color: @primary-color;
 
-}
-
-.btn {
-    padding: 10px 15px;
-    border: 0;
-}
-
-.primary-btn:extend(.btn) {
-    background: @primary-color;
-    color: #fff;
-}
+//mixins
