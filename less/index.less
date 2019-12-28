@@ -1,6 +1,10 @@
 //Variables
 @backgroundBlue: orange;
 
+//escaping
+@tablet: ~"(max-width: 800px)";
+
+
 //mixins
 .purpleText {
     color: @backgroundBlue;
@@ -25,7 +29,7 @@
     width: 800px;
     margin: 50px auto;
 
-    @media (max-width: 800px) {
+    @media @tablet {
         width: 100%;
         padding: 20px;
     }
@@ -47,7 +51,7 @@
                 }
 
 
-                @media (max-width: 800px) {
+                @media @tablet {
                     color: dodgerblue;
                 }
             }
